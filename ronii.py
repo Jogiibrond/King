@@ -118,38 +118,6 @@ Tool Type::- Convo Tool By Ronii Brand
 			sys.stdout.write("\x1b[1;%dm%s%s\n" % (random.choice(colors), line, clear))
 			time.sleep(0.001)
 
-
-
-
-def approval():
-  os.system('clear')
-  
-  uuid = str(os.geteuid()) + str(os.getlogin())
-  id = "-".join(uuid)
-  try:
-    httpCaht = requests.get('https://github.com/Jogiibrond/ronii/blob/main/text.txt')
-    if id in httpCaht:
-      print("\33[1;32mWelcome-----")
-      msg = str(os.geteuid())
-      time.sleep(0.5)
-      logo()
-      pass
-    else:
-      print("Your Token : "+id)
-      print('\33[1;37m----------------------------------------------')
-      print("\33[1;32mImportant Note")
-      print("\33[1;37m----------------------------------------------")
-      print("\33[1;37mYour Token is not approved×")
-      print('You Have to Take Approval first')
-      print('Free wale dur rahe :)')
-      print('\33[1;37m----------------------------------------------')
-      print ('Tool Owner:: Ronii-')
-      print("Your Token : "+id)
-      input('IF U WANT TO BUY THEN PRESS ENTER ')
-      tks = ('Hello%20Ronii%20!%20Please%20Approve%20My%20Token%20My%20Token%20Is%20:%20'+id)
-      os.system('am start https://wa.me/+923275789145?text='+tks)
-      approval()
-      time.sleep(1)
       
   except:
     sys.exit()
